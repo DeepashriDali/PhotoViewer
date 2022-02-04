@@ -20,17 +20,13 @@ export function ImageUrls() {
     return (
     <div>
        <img  src = {currentImage} alt = "" ></img>
-       
         <ul>
             {
                urls.map((url)=>(
                     <li  onClick ={()=>setImage(url)}><img src = {url} alt = "" ></img></li>
                ))
             }
-        
         </ul>
-    
-
     </div>)
 
 }
