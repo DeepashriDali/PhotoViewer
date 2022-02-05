@@ -1,17 +1,14 @@
-
+import React from 'react';
 import './App.css';
-import { ImageUrls } from './PhotoViewer/ImageUrls';
 
-
-// import { PhotoViewer } from './PhotoViewer/PhotoViewer';
-
+import { PhotoViewer } from './PhotoViewer/PhotoViewer';
 
 function App() {
   return (
-      <div>
+    <div className="App">
           <h1>React Photo Viewer</h1>
-          {/* <PhotoViewer src={"https://picsum.photos/id/600/1600/900.jpg"}/> */}
-          <ImageUrls/>
+          <PhotoViewer/>
+         
         
       </div>
   );

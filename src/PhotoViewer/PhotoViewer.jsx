@@ -1,19 +1,15 @@
-import React from "react";  
-import "./PhotoViewer.css"
+import React,{useState} from "react"    
+import { ImageUrls } from "./Images"
+import { PhotoDisplayer } from "./PhotoDisplayer"
+import { ImageSelector } from "./ImageSelector";
+import "./PhotoViewer.css";
 
+export function PhotoViewer() {
 
+    const [currentImage, setImage] = useState(ImageUrls[0]);
 
-export function PhotoViewer(props) {    
-        
-    if(!props.src){
-        return <div>
-            <img src="https://picsum.photos/id/237/200/300" alt =""></img>
-            <img src="https://picsum.photos/id/297/200/300" alt =""></img>
-            <img src="https://picsum.photos/id/127/200/300" alt =""></img>
-            <img src="https://picsum.photos/id/1009/200/300" alt =""></img>
-            <img src="https://picsum.photos/id/265/200/300" alt =""></img>
-        </div>
-    
-    }
-        return <div><img src = {props.src}  alt =""></img></div>
+    return <div>
+    <PhotoDisplayer currentImage = {currentImage}/>  
+    <ImageSelector ImageUrls = {ImageUrls} currentImage = {currentImage} setImage ={setImage} />
+    </div>
 }
