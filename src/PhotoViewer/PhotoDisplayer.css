@@ -1,6 +1,7 @@
 .hero-pic img {
-    width: 70vw;
+    width: 40vw;
     border: 10px solid rgb(100, 8, 62);
+    margin : 30px;
     border-radius: 1rem;
 
 }
